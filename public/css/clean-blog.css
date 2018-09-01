@@ -393,28 +393,38 @@ footer .copyright {
   text-align: center;
 }
 
-.btn {
-  font-size: 14px;
-  font-weight: 800;
-  padding: 15px 25px;
-  letter-spacing: 1px;
+/*===============================================
+* Colored Buttons
+================================================*/
+.form-control {
+  box-shadow: 3px 2px 3px #000000;
+}
+.btn{
+  box-shadow: 3px 2px 3px rgba(0, 0, 0, 0.15);
+  -webkit-transition: 350ms ease all;
+  transition: 350ms ease all;
   text-transform: uppercase;
-  border-radius: 0;
-  font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-weight: 500;
+  padding: .6rem 1.5rem;
 }
-
-.btn-primary {
-  background-color: #0085A1;
-  border-color: #0085A1;
+.btn:hover, .btn:focus {
+  box-shadow: 6px 6px 25px rgba(0, 0, 0, 0.15);
 }
-
-.btn-primary:hover, .btn-primary:focus, .btn-primary:active {
-  color: #fff;
-  background-color: #00657b !important;
-  border-color: #00657b !important;
+.btn-white {
+  color: #ff4081 !important;
+  background-color: #fff;
+  border-color: #fff;
 }
-
-.btn-lg {
-  font-size: 16px;
-  padding: 25px 35px;
+.btn-white:hover{
+  color: #ff4081;
+}
+.btn-primary{
+  background-color: #ff4081 !important;
+  border-color: #ff4081 !important;
+}
+.btn-primary:hover, .btn-primary:focus{
+  color: #fff !important;
+}
+.btn-radius{
+  border-radius: 50px;
 }
