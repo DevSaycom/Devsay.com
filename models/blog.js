@@ -18,6 +18,26 @@ const blogSchema = mongoose.Schema({
   body: {
     type: String,
     require: true
+  },
+  image: {
+    type: String,
+    required: false
+  },
+  image2: {
+    type: String,
+    required: false
+  },
+  image3: {
+    type: String,
+    required: false
+  },
+  image4: {
+    type: String,
+    required: false
+  },
+  image5: {
+    type: String,
+    required: false
   }
 })
 

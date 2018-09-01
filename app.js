@@ -8,6 +8,7 @@ const mongoose = require('mongoose')
 const passport = require('passport')
 const session = require('express-session')
 
+
 require('dotenv').config()
 
 const index = require('./routes/index')
@@ -20,7 +21,6 @@ const app = express()
 
 mongoose.connect('mongodb://127.0.0.1/devsay_landing', { useNewUrlParser: true })
 
-console.log(process.env.SESSION_SECRET)
 // view engine setup
 app.set('views', path.join(__dirname, 'views'))
 app.set('view engine', 'hbs')
@@ -43,6 +43,19 @@ require('./config/passport')(passport)
 //passport middleware
 app.use(passport.initialize())
 app.use(passport.session())
+
+//cors errores
+app.use((req, res, next) => {
+  res.header('Access-Control-Allow-Origin', '*')
+  res.header(
+    'Access-Control-Allow-Headers', 'Origin, X-Requested-With, Content-Type, Accept, Authorization'
+  )
+  if (req.method === 'OPTIONS') {
+    res.header('Access-Control-Allow-Methods', 'PUT, POST, PATCH, DELETE, GET')
+    return res.status(200).json({})
+  }
+  next()
+})
 
 app.get('*', (req, res, next) => {
   res.locals.user = req.user || null
