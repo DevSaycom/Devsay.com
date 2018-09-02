@@ -29,6 +29,7 @@ b, strong{
 .navbar{
     min-height: 80px;
 }
+
 .navbar-nav .nav-item .nav-link{
     font-weight: 500;
 }
