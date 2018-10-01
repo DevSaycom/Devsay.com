@@ -18,7 +18,7 @@ body{
     background-color: #FAFAFA !important;
 }
 h1,h2,h3,h4,h5,h6{
-    font-weight: 700;
+    font-weight: 600;
 }
 b, strong{
     font-weight: 500;
@@ -116,11 +116,12 @@ section{
 * Background Colors
 ================================================*/
 .bg-texture{
-    background: transparent -webkit-radial-gradient(circle farthest-side at right bottom, #ec407a 5%, #e91e63 25%, #d81b60 80%, #c2185b 98%) repeat scroll 0% 0% !important;
+    /* background: transparent -webkit-radial-gradient(circle farthest-side at right bottom, #ec407a 5%, #e91e63 25%, #d81b60 80%, #c2185b 98%) repeat scroll 0% 0% !important;
     background: transparent -o-radial-gradient(circle farthest-side at right bottom, #ec407a 5%, #e91e63 25%, #d81b60 80%, #c2185b 98%) repeat scroll 0% 0% !important;
     background: transparent -moz-radial-gradient(circle farthest-side at right bottom, #ec407a 5%, #e91e63 25%, #d81b60 80%, #c2185b 98%) repeat scroll 0% 0% !important;
     background: transparent radial-gradient(circle farthest-side at right bottom, #ec407a 5%, #e91e63 25%, #d81b60 80%, #c2185b 98%) repeat scroll 0% 0% !important;
-
+ */
+ background-color: white;
 }
 .bg-texture-collage{
         background:-webkit-linear-gradient(-45deg, #ffb300 33%, transparent 0%),

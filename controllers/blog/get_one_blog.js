@@ -1,4 +1,3 @@
-const mongoose = require('mongoose')
 const Blog = require('../../models/blog')
 
 exports.single_post = (req, res, next) => {
@@ -8,7 +7,7 @@ exports.single_post = (req, res, next) => {
     } else {
       if (blog < 1) {
         res.render('404', {
-          title: 'no existe wn'
+          title: 'no existe wn 1'
         })
       } else {
         res.render('blog/post', {

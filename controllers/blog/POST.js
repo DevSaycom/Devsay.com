@@ -18,23 +18,24 @@ const storage = multer.diskStorage({
 
 const upload = multer({
   storage: storage
-}).single('imagen')
+}).any()
 
 exports.blog_post = (req, res, next) => {
   upload(req, res, (err) => {
     if (err) {
       throw err
     } else {
-      console.log(req.file)
-      let imgn = req.file
-      console.log(imgn.filename)
+      console.log(req.files)
+      let imgn = req.files
+/*       console.log(imgn) */
       let blog = new Blog()
 
     blog._id = mongoose.Types.ObjectId()
     blog.title = req.body.title
     blog.slug = slugify(blog.title)
     blog.body = req.body.body
-    blog.image = imgn.filename
+    blog.image = imgn[0].filename
+    blog.image2 = imgn[1].filename
 
     blog.save((err) => {
     if (err) {

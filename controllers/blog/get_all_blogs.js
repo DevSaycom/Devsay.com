@@ -9,7 +9,7 @@ exports.get_all = (req, res, next) => {
       let inverted = posts.reverse()
 
       res.render('blog/blog', {
-        posts: posts,
+        posts: inverted,
         title: 'Hola poh ql'
       })
     }
